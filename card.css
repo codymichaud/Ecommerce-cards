@@ -13,7 +13,7 @@ body{
 }
 
 .container{
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +29,7 @@ body{
     margin: 40px;
     transform-style: preserve-3d;
     background: #232323;
+    border-radius: 20px;
 }
 
 .container .box::before{
@@ -36,11 +37,11 @@ body{
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 5em;
+    font-size: 6em;
     font-style: italic;
     font-weight: 900;
     color: #fff;
-    transition: 0.5s;
+     transition: 0.5s; 
     opacity: 0;
 }
 
@@ -59,7 +60,7 @@ body{
 
 .container .box:hover::before,
 .container .box:hover::after{
-    opacity: 0.15;
+    opacity: 0.05;
 
 }
 
@@ -74,7 +75,7 @@ body{
     transform: translate3d(0,0,75px);
     transition: 0.5s;
     opacity: 0;
-    z-index: 10;
+    z-index: 11;
 }
 
 .container .box:hover .name{
@@ -95,7 +96,7 @@ body{
     text-decoration: none;
     transition: 0.5s;
     opacity: 0;
-    z-index: 10;
+    z-index: 11;
 }
 
 .container .box:hover .buy{
@@ -115,7 +116,7 @@ background: #fff;
 transform-style: preserve-3d;
 z-index: 10;
 opacity: 1;
-transform: translate3d(-50%,-50%,0);
+transform: translate3d(-50%,-50%,50px);
 }
 
 .container .box:hover .circle{
@@ -126,11 +127,11 @@ transform: translate3d(-50%,-50%,0);
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 250px;
+    max-width: 300px;
     z-index: 11;
     transition: 0.5s;
     transform-style: preserve-3d;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0) rotate(-15deg);
 }
 
 .container .box:hover .product{
